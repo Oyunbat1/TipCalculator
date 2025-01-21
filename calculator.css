@@ -1,0 +1,103 @@
+body{
+    background-color: rgb(57, 190, 205);
+}
+.container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100vh;
+    align-items: center;
+}
+.container .header{
+    margin-bottom: 40px;
+}
+.container .header h1{
+    color: #fff;
+    font-size: 50px;
+    transition: all 1s;
+}
+.container .header h1:hover{
+    color: aquamarine;
+    transition: 1s;
+}
+.container .container-a{
+    display: flex;
+    flex-direction: column;
+    background-color: rgb(255, 255, 255);
+    border-radius: 20px;
+    height: 300px;
+    width: 300px;
+    justify-content: center;
+    align-items: center;
+}
+
+.container .container-a .calc-cover-container{
+    background-color: rgb(42, 138, 148);
+    height: 90%;
+    width: 90%;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    transition: all 1s;
+}
+.container .container-a .calc-cover-container:hover{
+    background-color:  rgb(57, 190, 205);
+    transition: all 1s;
+}
+
+.container .container-a .calc-cover-container .calc-within-container{
+    height: 90%;
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.container .container-a .calc-cover-container .calc-within-container .bill .input input{
+    width: 220px;
+    height: 25px;   
+   border-radius: 5px;
+   border-style: none;
+}
+
+.container .container-a .calc-cover-container .calc-within-container .select-tip .buttons{
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    gap: 5px;
+}
+
+
+.container .container-a .calc-cover-container .calc-within-container .select-tip .buttons button{
+    border-style: none;
+    height: 25px;
+    border-radius: 4px;
+    transition: all 0.5s;
+}
+.container .container-a .calc-cover-container .calc-within-container .select-tip .buttons button:hover{
+    background-color:  rgb(42, 138, 148);
+    color: #fff;
+    transition: all 0.5s;
+}
+
+
+.container .container-a .calc-cover-container .calc-within-container .output{
+    display: flex;
+    flex-direction: column;
+}
+
+.container .container-a .calc-cover-container .calc-within-container .output button{
+    border-style: none;
+    border-radius: 5px;
+    width: 240px;
+    height: 25px;   
+    background-color: #fff;
+    transition: all 0.5s;
+}
+
+.container .container-a .calc-cover-container .calc-within-container .output button:hover{
+    background-color:  rgb(42, 138, 148);
+    color: #fff;
+    transition: all 0.5s;
+}
