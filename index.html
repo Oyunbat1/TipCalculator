@@ -1,49 +1,51 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Calculator</title>
     <link rel="stylesheet" href="./calculator.css">
 </head>
+
 <body>
-<div class="container">
-    <div class="header">
-        <h1>Tip Calculator</h1>
-    </div>
-    <div class="container-a">
-        
-        <div class="calc-cover-container">
-            <div class="calc-within-container">
-                <div class="bill">
-                    <span>Bill</span>
-                    <div class="input">
-                        <span>₮</span>
-                        <input type="number" min="1" max="100" id="input-bill">
+    <div class="container">
+        <div class="header">
+            <h1>Tip Calculator</h1>
+        </div>
+        <div class="container-a">
+
+            <div class="calc-cover-container">
+                <div class="calc-within-container">
+                    <div class="bill">
+                        <span>Bill</span>
+                        <div class="input">
+                            <span>₮</span>
+                            <input type="number" min="1" max="100" id="input-bill">
+                        </div>
+
                     </div>
-                    
-                </div>
-                <div class="select-tip">
-                    <span>Select Tip %</span>
-                    <div class="buttons">
-                        <button onclick="fivePersent()">5%</button>
-                        <button onclick="tenPersent()">10%</button>
-                        <button onclick=" fifteenPersent()">15%</button>
-                        <button onclick="twentyfivePersent()">25%</button>
-                        <button onclick="thirtyfivePersent()">35%</button>
-                        <button onclick="fifty()">50%</button>
-                        <button onclick="sixtyfive()">65%</button>
-                        <button onclick="eighty()">80%</button>
+                    <div class="select-tip">
+                        <span>Select Tip %</span>
+                        <div id="buttons">
+                            <button class="tip">5%</button>
+                            <button class="tip">10%</button>
+                            <button class="tip">15%</button>
+                            <button class="tip">25%</button>
+                            <button class="tip">35%</button>
+                            <button class="tip">50%</button>
+                            <button class="tip">65%</button>
+                            <button class="tip">80%</button>
+                        </div>
+                        <div class="output">
+                            <span id="num">0.00</span>
+                            <button id="reset">Reset</button>
+                        </div>
                     </div>
-                </div>
-                <div class="output">
-                    <span id="num">0.00</span>
-                    <button id="reset" >Reset</button>
                 </div>
             </div>
         </div>
-    </div>
-</div>
-<script src="calculator.js"></script>
+        <script src="calculator.js"></script>
 </body>
+
 </html>
