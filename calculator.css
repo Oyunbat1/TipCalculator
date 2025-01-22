@@ -30,7 +30,7 @@ body {
     flex-direction: column;
     background-color: rgb(255, 255, 255);
     border-radius: 20px;
-    height: 300px;
+    height: 400px;
     width: 300px;
     justify-content: center;
     align-items: center;
@@ -61,6 +61,11 @@ body {
     gap: 30px;
 }
 
+.container .container-a .calc-cover-container .calc-within-container .bill .input{
+    margin-top: 10px;
+}
+
+
 .container .container-a .calc-cover-container .calc-within-container .bill .input input {
     width: 220px;
     height: 25px;
@@ -72,8 +77,11 @@ body {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     gap: 5px;
+    margin: 10px 0;
 }
-
+.container .container-a .calc-cover-container .calc-within-container .select-tip .output #reset {
+margin-top: 10px;
+}
 
 .container .container-a .calc-cover-container .calc-within-container .select-tip #buttons button {
     border-style: none;

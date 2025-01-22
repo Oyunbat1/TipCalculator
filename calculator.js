@@ -62,10 +62,13 @@ for (let i = 0 ; i < tipsRef.length ; i++){
     const tipGetValues = parseFloat(tipStrings.replace('%', ''));
     const input = document.getElementById('input-bill');
     const inputValue = parseFloat(input.value);
+    const inputCustomer = document.getElementById('input-customer')
+    const inputCustomerValue = parseFloat(inputCustomer.value);
     if (!isNaN(inputValue)) {
-      const finalResult = (inputValue * tipGetValues) / 100;
-      const sum = finalResult + inputValue;
-      document.getElementById('num').innerHTML = sum;
+      const Result = (inputValue * tipGetValues) / 100;
+      const sum = Result + inputValue;
+      const finalResult = sum / inputCustomerValue;
+      document.getElementById('num').innerHTML = finalResult;
     } else {
       console.log('error bro');
     }
@@ -73,13 +76,8 @@ for (let i = 0 ; i < tipsRef.length ; i++){
 }
 
 document.getElementById('reset').addEventListener('click', () => {
-  document.getElementById('input-bill').value = '0';
+  document.getElementById('input-bill').value = '';
   document.getElementById('num').textContent = '0.00';
+  document.getElementById('input-customer').value =''
 })
 
-// const tipValuesContainer = [];
-// for (let i = 0; i < tipsContainer.children.length; i++) {
-//   const tipStrings = tipsContainer.children[i].innerHTML
-//   const tipGetValues = parseFloat(tipStrings.replace('%', ''))
-//   tipValuesContainer.push(tipGetValues);
-// };
