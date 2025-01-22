@@ -55,18 +55,22 @@
 
 const tipsContainer = document.getElementById('buttons');
 const tipsRef = document.getElementsByClassName('tip');
-tipsContainer.addEventListener('click', (event) => {
-  const tipStrings = event.target.innerHTML;
-  const tipGetValues = parseFloat(tipStrings.replace('%', ''));
-  const input = document.getElementById('input-bill');
-  const inputValue = parseFloat(input.value);
-  if (!isNaN(inputValue)) {
-    const finalResult = (inputValue * tipGetValues) / 100;
-    document.getElementById('num').innerHTML = finalResult;
-  } else {
-    console.log('error bro');
-  }
-})
+
+for (let i = 0 ; i < tipsRef.length ; i++){
+  tipsRef[i].addEventListener('click',(event)=>{
+    const tipStrings = event.target.innerHTML;
+    const tipGetValues = parseFloat(tipStrings.replace('%', ''));
+    const input = document.getElementById('input-bill');
+    const inputValue = parseFloat(input.value);
+    if (!isNaN(inputValue)) {
+      const finalResult = (inputValue * tipGetValues) / 100;
+      const sum = finalResult + inputValue;
+      document.getElementById('num').innerHTML = sum;
+    } else {
+      console.log('error bro');
+    }
+  })
+}
 
 document.getElementById('reset').addEventListener('click', () => {
   document.getElementById('input-bill').value = '0';
