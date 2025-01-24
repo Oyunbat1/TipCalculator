@@ -64,13 +64,13 @@ for (let i = 0 ; i < tipsRef.length ; i++){
     const inputValue = parseFloat(input.value);
     const inputCustomer = document.getElementById('input-customer')
     const inputCustomerValue = parseFloat(inputCustomer.value);
-    if (!isNaN(inputValue)) {
+    if (!isNaN(inputValue && inputCustomer)) {
       const Result = (inputValue * tipGetValues) / 100;
       const sum = Result + inputValue;
       const finalResult = sum / inputCustomerValue;
       document.getElementById('num').innerHTML = finalResult;
     } else {
-      console.log('error bro');
+      alert('Хоосон зайгаа бөглөнө үү бро !!!')
     }
   })
 }
